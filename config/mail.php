@@ -1,12 +1,11 @@
 <?php
-// Set these as Windows/Apache environment variables. For Gmail SMTP, use a
-// Google App Password, not your normal account password.
+// Secure code: Real passwords live only inside Render, not in the code file!
 $smtpHost = getenv('ERMS_SMTP_HOST') ?: 'smtp.gmail.com';
 $smtpPort = (int) (getenv('ERMS_SMTP_PORT') ?: 587);
 $smtpSecure = getenv('ERMS_SMTP_SECURE') ?: 'tls';
 $smtpUsername = getenv('ERMS_SMTP_USERNAME') ?: 'albertobelacassaspa@gmail.com';
 $smtpPassword = getenv('ERMS_SMTP_PASSWORD') ?: 'wbfw iuhz vrxe joke';
-$mailFrom = getenv('ERMS_MAIL_FROM') ?: $smtpUsername;
+$mailFrom = getenv('ERMS_MAIL_FROM') ?: getenv('ERMS_SMTP_USERNAME');
 $mailFromName = getenv('ERMS_MAIL_FROM_NAME') ?: 'ERMS';
 
 define('ERMS_SMTP_HOST', $smtpHost);
