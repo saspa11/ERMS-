@@ -1,7 +1,7 @@
 <?php
 // Secure code: Real passwords live only inside Render, not in the code file!
 $smtpHost = getenv('ERMS_SMTP_HOST') ?: 'smtp.gmail.com';
-$smtpPort = (int) (getenv('ERMS_SMTP_PORT') ?: 587);
+$smtpPort = (int) (getenv('ERMS_SMTP_PORT') ?: 2525);
 $smtpSecure = getenv('ERMS_SMTP_SECURE') ?: 'tls';
 $smtpUsername = getenv('ERMS_SMTP_USERNAME') ?: 'albertobelacassaspa@gmail.com';
 $smtpPassword = getenv('ERMS_SMTP_PASSWORD') ?: 'wbfw iuhz vrxe joke';
